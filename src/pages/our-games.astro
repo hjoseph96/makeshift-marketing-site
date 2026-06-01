@@ -1,0 +1,186 @@
+---
+import Footer from '~/components/Footer.astro';
+import Layout from '~/layouts/Layout.astro';
+
+const metadata = {
+  title: 'Our Games | Makeshift Games',
+  ignoreTitleTemplate: true,
+};
+
+const games = [
+  {
+    title: 'Hexborn',
+    slug: 'hexborn',
+    status: 'Coming Soon',
+    statusDetail: 'Q4 2027',
+    genres: ['Action', 'RPG'],
+    description:
+      'Hexborn is a dark fantasy action RPG where you rise from an unknown mage into the leader of a legendary guild. Master arcane combat, recruit powerful allies, forge relics, and descend into dangerous dungeons and large-scale raids to uncover the secrets behind your rare ability to fly.',
+    steamUrl: 'https://store.steampowered.com/app/3770540/Hexborn/',
+    headerImage:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3770540/51487d64340873af3cf10970040da1a479aa5549/header.jpg?t=1780090757',
+    cta: 'Wishlist on Steam',
+  },
+  {
+    title: 'Codename: Mystery Babylon',
+    slug: 'mystery-babylon',
+    status: 'Early Access',
+    statusDetail: 'Available Now',
+    genres: ['RPG', 'Strategy', 'Tactical'],
+    description:
+      '16-bit Tactical RPG based in medieval times. Command your forces wisely in combat and explore the world map using traditional RPG mechanics.',
+    steamUrl: 'https://store.steampowered.com/app/1597250/Codename_Mystery_Babylon/',
+    headerImage:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1597250/header.jpg?t=1636592545',
+    cta: 'Buy on Steam',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <main class="our-games-page overflow-hidden">
+    <section class="header games-hero">
+      <div class="header-bg-pink absolute sm:top-[400px] sm:left-[400px] top-[300px] left-[100px]"></div>
+      <div class="header-bg-blue absolute sm:top-[400px] sm:left-[400px] top-[300px] left-[100px]"></div>
+
+      <div class="content relative z-10 w-full px-4 pb-16 pt-12 sm:pb-20 sm:pt-16 md:pb-24 md:pt-20">
+        <div class="container mx-auto max-w-5xl text-center">
+          <a href="/" class="mb-8 inline-block transition-opacity hover:opacity-80">
+            <img
+              src="/assets/images/makeshift-logo-cropped.png"
+              alt="Makeshift Software Inc."
+              class="mx-auto h-8 w-40 object-contain sm:h-10 sm:w-48 md:h-12 md:w-56"
+            />
+          </a>
+
+          <h1 class="h2 mb-3">Makeshift Games</h1>
+          <p class="text-lg font-semibold text-[#FEFEFE] sm:text-xl">Play Anywhere</p>
+
+          <div class="mx-auto mt-8 mb-8 max-w-3xl space-y-4 text-left sm:mt-10 sm:text-center">
+            <p class="text-[1.1rem] text-[1.8rem] font-light tracking-[0.2px] leading-[1.4] text-[whitesmoke] sm:text-base">
+              Makeshift Games develops original titles for PC, console, and mobile, bringing immersive worlds and bold
+              gameplay to players on every major platform.
+            </p>
+            <p class="text-[1.1rem] font-light tracking-[0.2px] leading-[1.4] text-[whitesmoke] sm:text-base">
+              From early prototypes to polished releases, our studio builds games designed to be played anywhere — at your
+              desk, on the couch, or on the go.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mx-auto max-w-6xl px-4 pt-20 pb-20 sm:pb-28">
+      <h2 class="title1 mb-8 text-center sm:mb-12">Our Releases</h2>
+
+      <div class="grid items-stretch gap-8 lg:grid-cols-2 lg:gap-10">
+        {
+          games.map((game) => (
+            <article class="game-card group flex h-full min-h-0 flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#14161D] shadow-xl transition hover:border-white/20 hover:shadow-2xl">
+              <a href={game.steamUrl} target="_blank" rel="noopener noreferrer" class="block shrink-0 overflow-hidden">
+                <img
+                  class="game_header_image_full w-full object-cover transition duration-500 group-hover:scale-[1.02]"
+                  src={game.headerImage}
+                  alt={`${game.title} header`}
+                  width={460}
+                  height={215}
+                  loading="lazy"
+                />
+              </a>
+
+              <div class="flex min-h-0 flex-1 flex-col p-6 sm:p-8">
+                <div class="flex-1 space-y-4">
+                  <div class="flex flex-wrap items-start justify-between gap-3">
+                    <h3 class="title2 text-white">{game.title}</h3>
+                    <div class="text-right">
+                      <span class="inline-block rounded-full bg-[rgba(139,0,0,0.9)] px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white">
+                        {game.status}
+                      </span>
+                      <p class="mt-1 text-xs text-center font-semibold">{game.statusDetail}</p>
+                    </div>
+                  </div>
+
+                  <ul class="flex flex-wrap gap-2">
+                    {game.genres.map((genre) => (
+                      <li class="rounded-md border border-[darkred] bg-transparent px-2.5 py-1 text-xs font-extrabold tracking-[0.5px] text-[red] transition-colors duration-300 hover:border-[#930101] hover:bg-[#930101] hover:text-[antiquewhite]">
+                        {genre}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <p class="mx-[1em] text-[0.9rem] font-normal tracking-[0.2px] leading-[1.8] text-[whitesmoke]">
+                    {game.description}
+                  </p>
+                </div>
+
+                <a
+                  href={game.steamUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="mt-6 block w-full shrink-0 rounded-lg bg-[darkred] px-6 py-3 text-center text-sm text-[antiquewhite] font-semibold transition hover:bg-[#930101] sm:text-base"
+                >
+                  {game.cta}
+                </a>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <hr class="opacity-10" />
+    <Footer />
+  </main>
+</Layout>
+
+<style>
+  .our-games-page {
+    position: relative;
+    min-height: 100vh;
+  }
+
+  .header {
+    position: relative;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    overflow: hidden;
+
+    .header-bg-pink {
+      width: 1136.422px;
+      height: 951.387px;
+      transform: rotate(-38.088deg);
+      flex-shrink: 0;
+      border-radius: 1136.422px;
+      background: #D20202;
+      filter: blur(110px);
+      animation: bg-circle-pink 8s linear infinite;
+    }
+
+    .header-bg-blue {
+      width: 1136.422px;
+      height: 951.387px;
+      transform: rotate(-38.088deg);
+      flex-shrink: 0;
+      border-radius: 1136.422px;
+      background: #262626;
+      filter: blur(110px);
+      animation: bg-circle-blue 8s linear infinite;
+    }
+
+    .content {
+      position: relative;
+    }
+  }
+
+  .games-hero {
+    min-height: 520px;
+  }
+
+  .game-card {
+    backdrop-filter: blur(8px);
+  }
+
+  .game_header_image_full {
+    aspect-ratio: 460 / 215;
+  }
+</style>

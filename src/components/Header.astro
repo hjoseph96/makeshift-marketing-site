@@ -19,13 +19,10 @@ import { SITE } from '~/utils/config';
           Makeshift Software Inc.
         </h1>
         <p class="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
-          We help non-technical founders launch secure, scalable AI web apps
+          We make what you didn't know you wanted.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button id="booking-btn" class="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-            Get Started Today
-          </button>
-          <button id="services-btn" class="border-2 border-white text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 hover:bg-white hover:text-gray-900">
+          <button id="booking-btn" class="border-2 border-white text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 hover:bg-white hover:text-gray-900">
             Learn More
           </button>
         </div>
@@ -103,11 +100,11 @@ import { SITE } from '~/utils/config';
     }
     
     if (bookingBtn) {
-      bookingBtn.addEventListener('click', () => smoothScrollTo('#booking'));
+      bookingBtn.addEventListener('click', () => smoothScrollTo('#our-products'));
     }
     
     if (servicesBtn) {
-      servicesBtn.addEventListener('click', () => smoothScrollTo('#our-services'));
+      servicesBtn.addEventListener('click', () => smoothScrollTo('#our-products'));
     }
   });
 </script>

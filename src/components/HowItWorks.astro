@@ -7,16 +7,15 @@ import '@splidejs/react-splide/css';
 ---
 
 <div class="how-it-works">
-  <div class="container text-center sm:p-24 px-4 py-20" id="our-services">
-    <div class="h2">Our Services</div>
-
+  <div class="container text-center sm:p-24 px-4 py-20" id="our-products">
+    <div class="h2">Our Products</div>
 
     <p class="text-lg text-byline mt-4 max-w-3xl mx-auto">
-      From security audits to fractional CTO services, we help SaaS founders build secure, scalable applications
+      <b>Makeshift Software Inc.</b> is a software venture studio developing products across social networking, local commerce, and games, including <b>Senpai</b>, <b>ThunderTruck</b>, and <b>Makeshift Games</b>.
     </p>
   </div>
 
-  <div class="container px-4 pb-20 relative">
+  <div class="container px-4 pb-20 pl-20 pr-20 relative">
     <Splide
       options={{
         type: 'loop',
@@ -43,289 +42,112 @@ import '@splidejs/react-splide/css';
       }}
       aria-label="Service Tiers"
     >
-      <!-- Tier 1 -->
+      <!-- Senpai -->
       <SplideSlide>
-        <div class="bg-gray-800/10 backdrop-blur-sm rounded-xl shadow-lg border-2 border-[#D20202] p-6 h-full flex flex-col max-w-sm mx-auto">
+        <div class="bg-[dimgrey] backdrop-blur-sm rounded-xl shadow-lg border-2 border-[whitesmoke] p-6 h-full flex flex-col max-w-sm mx-auto">
           <div class="text-center mb-4">
-            <div class="inline-flex items-center justify-center w-12 h-12 bg-[#D20202] rounded-full mb-3">
-              <svg class="w-6 h-6 text-whitesmoke" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-              </svg>
+            <div class="inline-flex items-center justify-center mb-6">
+              <img
+                src="/assets/images/senpai_logo.png"
+                alt="Senpai logo"
+                class="h-16 w-16 max-w-full object-contain sm:h-20 sm:w-20 md:h-24 md:w-24"
+              />
             </div>
-            <h3 class="text-xl text-white font-bold mb-1">Tier 1</h3>
-            <h4 class="text-lg font-semibold text-[#D20202] mb-1">App Audit & Security Readiness</h4>
-            <div class="text-2xl text-white font-bold mb-1">$4,500</div>
-            <p class="text-xs text-white">One-time investment</p>
+            <h3 class="text-xl sm:text-2xl text-white font-bold mb-1">Senpai</h3>
+            <h4 class="text-base sm:text-lg font-semibold text-[#FEFEFE] mb-1">Anime Social & Dating</h4>
           </div>
 
-          <div class="mb-4">
-            <h5 class="font-semibold text-[#D20202] mb-2 text-sm">Transformation:</h5>
-            <p class="text-white text-xs mb-3">
-              Clarity on vulnerabilities, performance risks, and architectural flaws before launch
+          <div class="flex-1 space-y-3 sm:space-y-4">
+            <p class="text-xs text-[0.9rem] sm:text-sm md:text-base text-white tracking-[0.3px] leading-[1.4]">
+              Senpai is an anime-focused social networking and dating app built for fans who want to connect through shared fandom, personality, and avatar-based interaction.
+            </p>
+            <p class="text-xs text-[0.9rem] sm:text-sm md:text-base text-white tracking-[0.3px] leading-[1.4]">
+              The platform combines anime dating, social discovery, and creator-driven content, giving users a dedicated space to meet other fans, chat, match, and express themselves through anime-inspired profiles and digital identity.
             </p>
           </div>
 
-          <div class="flex-1">
-            <h5 class="font-semibold text-[#D20202] mb-2 text-sm">Includes:</h5>
-            <ul class="space-y-1.5 text-xs text-white">
-              <li class="flex items-start font-black">
-                <svg class="w-3 h-3 text-[#D20202] mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                Full-stack technical audit (backend, API, frontend)
-              </li>
-              <li class="flex items-start font-black">
-                <svg class="w-3 h-3 text-[#D20202] mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                Security checklist (OWASP top 10, Auth, GDPR/PII flags)
-              </li>
-              <li class="flex items-start font-black">
-                <svg class="w-3 h-3 text-[#D20202] mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                1-hour founder debrief + priority action roadmap
-              </li>
-              <li class="flex items-start font-black">
-                <svg class="w-3 h-3 text-[#D20202] mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                Access: Slack support for 7 days post-audit
-              </li>
-              <li class="flex items-start font-black">
-                <svg class="w-3 h-3 text-[#D20202] mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                Assets: PDF audit + Loom walk-through video
-              </li>
-            </ul>
-          </div>
+          <a
+            href="https://senpaiapp.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-4 block w-full rounded-lg bg-white px-6 py-3 text-center text-sm font-semibold text-gray-900 transition hover:bg-gray-100 sm:text-base"
+          >
+            Visit Senpai
+          </a>
         </div>
       </SplideSlide>
 
       <!-- Tier 2 -->
       <SplideSlide>
-        <div class="bg-gray-800/10 backdrop-blur-sm rounded-xl shadow-lg border-2 border-[#D20202] p-6 h-full flex flex-col relative max-w-sm mx-auto">
-          <div class="absolute -top-2 left-1/2 transform -translate-x-1/2">
-            <span class="bg-[#D20202] text-white px-3 py-0.5 rounded-full text-xs font-semibold">Most Popular</span>
-          </div>
-          
+        <div class="bg-[#FCA211] backdrop-blur-sm rounded-xl shadow-lg border-2 border-[#DB6800] p-6 h-full flex flex-col relative max-w-sm mx-auto">
           <div class="text-center mb-4">
-            <div class="inline-flex items-center justify-center w-12 h-12 bg-[#D20202] rounded-full mb-3">
-              <svg class="w-6 h-6 text-whitesmoke" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-              </svg>
+            <div class="inline-flex items-center justify-center mb-6">
+              <img
+                src="/assets/images/thundertruck_logo.png"
+                alt="ThunderTruck Logo"
+                class="h-16 w-16 max-w-full object-contain sm:h-20 sm:w-20 md:h-24 md:w-24"
+              />
             </div>
-            <h3 class="text-xl font-bold text-white mb-1">Tier 2</h3>
-            <h4 class="text-lg font-semibold text-[#D20202] mb-1">MVP Refactor & Security Fix Package</h4>
-            <div class="text-2xl font-bold text-white mb-1">$12,000</div>
-            <p class="text-xs text-white">3-week sprint</p>
-          </div>
 
-          <div class="mb-4">
-            <h5 class="font-semibold text-[#D20202] mb-2 text-sm">Transformation:</h5>
-            <p class="text-white text-xs mb-3">
-              A production-ready app with reduced risk of breakage, downtime, or breaches
+            <h3 class="text-xl sm:text-2xl text-white font-bold mb-1">ThunderTruck</h3>
+            <h4 class="text-base sm:text-lg font-semibold text-[#FEFEFE] mb-1">Food Delivery</h4>
+          </div>          
+
+          <div class="flex-1 space-y-3 sm:space-y-4">
+            <p class="text-xs text-[antiquewhite] text-[0.9rem] font-semibold sm:text-sm md:text-base text-white tracking-[0.3px] leading-[1.4]">
+              Experience the best authentic cuisines from local restaurants, delivered straight to your doorstep. Fresh, fast, and full of flavor.
+            </p>
+            <p class="text-xs text-[antiquewhite] text-[0.9rem] font-semibold sm:text-sm md:text-base text-white tracking-[0.3px] leading-[1.4]">
+              The platform combines anime dating, social discovery, and creator-driven content, giving users a dedicated space to meet other fans, chat, match, and express themselves through anime-inspired profiles and digital identity.
             </p>
           </div>
 
-          <div class="flex-1">
-            <h5 class="font-semibold text-[#D20202] mb-2 text-sm">Includes:</h5>
-            <ul class="space-y-1.5 text-xs text-white">
-              <li class="flex items-start font-black">
-                <svg class="w-3 h-3 text-[#D20202] mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                Everything in Tier 1
-              </li>
-              <li class="flex items-start font-black">
-                <svg class="w-3 h-3 text-[#D20202] mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                3-week sprint to fix core vulnerabilities and bad code
-              </li>
-              <li class="flex items-start font-black">
-                <svg class="w-3 h-3 text-[#D20202] mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                Staging deployment walkthrough
-              </li>
-              <li class="flex items-start font-black">
-                <svg class="w-3 h-3 text-[#D20202] mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                Integration of AI productivity tools (e.g., Cursor, Claude)
-              </li>
-              <li class="flex items-start font-black">
-                <svg class="w-3 h-3 text-[#D20202] mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                Access: Weekly 1:1 founder check-ins
-              </li>
-              <li class="flex items-start font-black">
-                <svg class="w-3 h-3 text-[#D20202] mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                Assets: GitHub repo handover + updated documentation
-              </li>
-            </ul>
-          </div>
+          <a
+            href="https://senpaiapp.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-4 block w-full rounded-lg bg-[#DB6800] px-6 py-3 text-center text-sm text-[antiquewhite] font-semibold text-gray-900 transition hover:bg-[#af5300] sm:text-base"
+          >
+            Visit ThunderTruck™
+          </a>
         </div>
       </SplideSlide>
 
       <!-- Tier 3 -->
       <SplideSlide>
-        <div class="bg-gray-800/10 backdrop-blur-sm rounded-xl shadow-lg border-2 border-[#D20202] p-6 h-full flex flex-col max-w-sm mx-auto">
+        
+        <div class="bg-[rgba(139,0,0,0.9)] backdrop-blur-sm rounded-xl shadow-lg border-2 border-[#2a0000] p-6 h-full flex flex-col relative max-w-sm mx-auto">
           <div class="text-center mb-4">
-            <div class="inline-flex items-center justify-center w-12 h-12 bg-[#D20202] rounded-full mb-3">
-              <svg class="w-6 h-6 text-whitesmoke" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-              </svg>
+            <div class="inline-flex items-center justify-center">
+              <img
+                src="/assets/images/makeshift-logo-cropped.png"
+                alt="Makeshift Logo"
+                class="max-w-full object-contain w-40 h-8 mt-6 mx-4 mb-2 sm:w-48 sm:h-10 sm:mt-8 sm:mx-8 sm:mb-3 md:w-56 md:h-12 md:mt-12 md:mx-12 md:mb-4"
+              />
             </div>
-            <h3 class="text-xl font-bold text-white mb-1">Tier 3</h3>
-            <h4 class="text-lg font-semibold text-[#D20202] mb-1">Fractional CTO + Technical PM</h4>
-            <div class="text-2xl font-bold text-white mb-1">$25,000</div>
-            <p class="text-xs text-white">60 Days</p>
-          </div>
 
-          <div class="mb-4">
-            <h5 class="font-semibold text-[#D20202] mb-2 text-sm">Transformation:</h5>
-            <p class="text-white text-xs mb-3">
-              Secure, scalable launch with direct oversight of product and dev team
+            <h3 class="text-xl sm:text-2xl text-white font-bold mb-1">Makeshift Games</h3>
+            <h4 class="text-base sm:text-lg font-semibold text-[#FEFEFE] mb-1">Play Anywhere</h4>
+          </div>          
+
+          <div class="flex-1 space-y-3 sm:space-y-4">
+            <p class="text-xs text-[lightcoral] text-[0.9rem] font-semibold sm:text-sm md:text-base text-white tracking-[0.2px] leading-[1.4]">
+              Makeshift Games develops original titles for PC, console, and mobile, bringing immersive worlds and bold gameplay to players on every major platform.
+            </p>
+            <p class="text-xs text-[lightcoral] text-[0.9rem] font-semibold sm:text-sm md:text-base text-white tracking-[0.2px] leading-[1.4]">
+              From early prototypes to polished releases, our studio builds games designed to be played anywhere — at your desk, on the couch, or on the go.
             </p>
           </div>
 
-          <div class="flex-1">
-            <h5 class="font-semibold text-[#D20202] mb-2 text-sm">Includes:</h5>
-            <ul class="space-y-1.5 text-xs text-white">
-              <li class="flex items-start font-black">
-                <svg class="w-3 h-3 text-[#D20202] mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                Everything in Tier 2
-              </li>
-              <li class="flex items-start font-black">
-                <svg class="w-3 h-3 text-[#D20202] mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                Weekly sprint planning & prioritization
-              </li>
-              <li class="flex items-start font-black">
-                <svg class="w-3 h-3 text-[#D20202] mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                Onboarding, hiring or vetting devs
-              </li>
-              <li class="flex items-start font-black">
-                <svg class="w-3 h-3 text-[#D20202] mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                Vendor/API negotiation and stack decisions
-              </li>
-              <li class="flex items-start font-black">
-                <svg class="w-3 h-3 text-[#D20202] mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                Access: Slack + 2 calls/week + async voice notes
-              </li>
-              <li class="flex items-start font-black">
-                <svg class="w-3 h-3 text-[#D20202] mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-                Assets: Launch plan, architecture map, dev productivity system
-              </li>
-            </ul>
-          </div>
+          <a
+            href="/our-games"
+            class="mt-4 block w-full rounded-lg bg-[#540101] px-6 py-3 text-center text-sm text-[antiquewhite] font-semibold transition hover:bg-[#930101] sm:text-base"
+          >
+            View Our Games
+          </a>
         </div>
       </SplideSlide>
     </Splide>
-  </div>
-
-  <!-- Previous Companies Section -->
-  <div class="container px-4 py-16">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl font-bold text-white mb-4">Companies We've Worked With</h2>
-      <p class="text-lg text-byline max-w-3xl mx-auto">
-        Trusted by leading organizations to deliver secure, scalable solutions
-      </p>
-    </div>
-
-    <div class="companies-scroll-container">
-      <div class="companies-scroll">
-        <!-- First set of logos -->
-        <a href="https://senpaiapp.com" target="_blank" rel="noopener noreferrer" class="company-logo">
-          <img src="https://i.imgur.com/pmWX3Rj.png" alt="Senpai" class="company-img" />
-        </a>
-        
-        <a href="https://vacareers.va.gov/" target="_blank" rel="noopener noreferrer" class="company-logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Seal_of_the_U.S._Department_of_Veterans_Affairs.svg" alt="US Department of Veteran Affairs" class="company-img" />
-        </a>
-        
-        <a href="https://kitsplit.com/" target="_blank" rel="noopener noreferrer" class="company-logo">
-          <img src="https://s3.amazonaws.com/kitsplit/img/logos/ks-logo-whole-small.png" alt="KitSplit" class="company-img" />
-        </a>
-        
-        <a href="https://partech.com/retail/" target="_blank" rel="noopener noreferrer" class="company-logo">
-          <img src="https://mma.prnewswire.com/media/2664714/PAR_Logo.jpg?w=200" alt="PAR Retail" class="company-img" />
-        </a>
-        
-        <a href="https://www.mvp-vc.com/" target="_blank" rel="noopener noreferrer" class="company-logo">
-          <img src="https://cdn.prod.website-files.com/62155a0df36bb03a3ac9c8db/6228f7049d28b655bcccff79_Primary%20White%20Green%20MVP%20Ventures%20Logo.png" alt="MVP Ventures" class="company-img" />
-        </a>
-        
-        <a href="https://blocks.app/" target="_blank" rel="noopener noreferrer" class="company-logo">
-          <img src="https://blocks.app/_next/static/media/Blocks-Logo--Inverted.8589255d.svg" alt="Blocks" class="company-img" />
-        </a>
-        
-        <a href="https://www.opuslogica.com/" target="_blank" rel="noopener noreferrer" class="company-logo">
-          <img src="https://cdn.prod.website-files.com/6511e72b65b1b1dc0dc72352/669064553adb95b628c57569_Opus%20Logica%20Updated%20Logo-p-500.png" alt="Opus Logica" class="company-img" />
-        </a>
-
-        <!-- Duplicate set for seamless loop -->
-        <a href="https://senpaiapp.com" target="_blank" rel="noopener noreferrer" class="company-logo">
-          <img src="https://i.imgur.com/pmWX3Rj.png" alt="Senpai" class="company-img" />
-        </a>
-        
-        <a href="https://vacareers.va.gov/" target="_blank" rel="noopener noreferrer" class="company-logo">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Seal_of_the_U.S._Department_of_Veterans_Affairs.svg" alt="US Department of Veteran Affairs" class="company-img" />
-        </a>
-        
-        <a href="https://kitsplit.com/" target="_blank" rel="noopener noreferrer" class="company-logo">
-          <img src="https://s3.amazonaws.com/kitsplit/img/logos/ks-logo-whole-small.png" alt="KitSplit" class="company-img" />
-        </a>
-        
-        <a href="https://partech.com/retail/" target="_blank" rel="noopener noreferrer" class="company-logo">
-          <img src="https://mma.prnewswire.com/media/2664714/PAR_Logo.jpg?w=200" alt="PAR Retail" class="company-img" />
-        </a>
-        
-        <a href="https://www.mvp-vc.com/" target="_blank" rel="noopener noreferrer" class="company-logo">
-          <img src="https://cdn.prod.website-files.com/62155a0df36bb03a3ac9c8db/6228f7049d28b655bcccff79_Primary%20White%20Green%20MVP%20Ventures%20Logo.png" alt="MVP Ventures" class="company-img" />
-        </a>
-        
-        <a href="https://blocks.app/" target="_blank" rel="noopener noreferrer" class="company-logo">
-          <img src="https://blocks.app/_next/static/media/Blocks-Logo--Inverted.8589255d.svg" alt="Blocks" class="company-img" />
-        </a>
-        
-        <a href="https://www.opuslogica.com/" target="_blank" rel="noopener noreferrer" class="company-logo">
-          <img src="https://cdn.prod.website-files.com/6511e72b65b1b1dc0dc72352/669064553adb95b628c57569_Opus%20Logica%20Updated%20Logo-p-500.png" alt="Opus Logica" class="company-img" />
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Booking Section -->
-  <div class="container px-4 py-20" id="booking">
-    <div class="text-center">
-      <h2 class="text-4xl font-bold text-white mb-6">Ready to Transform Your App?</h2>
-      
-      <p class="text-lg text-byline max-w-3xl mx-auto mb-8">
-        Don't let security vulnerabilities or technical debt hold your business back. Book a free 30-minute consultation to discuss your specific challenges and discover how we can help you build a secure, scalable foundation for your success.
-      </p>
-
-      <a href="https://calendly.com/herbert-joseph/30min" target="_blank" class="book-now-btn">
-        Book Now
-      </a>
-    </div>
   </div>
 </div>
 
@@ -356,7 +178,7 @@ import '@splidejs/react-splide/css';
   }
   
   :global(.splide__pagination) {
-    bottom: 1.5em !important;
+    bottom: -2.5em !important;
   }
   
   :global(.splide__pagination__page) {
