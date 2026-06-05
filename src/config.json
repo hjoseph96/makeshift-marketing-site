@@ -1,7 +1,7 @@
 {
   "site": {
-    "name": "Hexborn | Indie Action RPG",
-    "site": "https://senpaiapp.com",
+    "name": "Makeshift Software Inc.",
+    "site": "https://makeshift.software",
     "base": "/",
     "trailingSlash": false,
     "googleSiteVerificationId": "",
@@ -9,16 +9,16 @@
   },
   "metadata": {
     "title": {
-      "default": "Hexborn | Action RPG",
-      "template": "%s | Hexborn"
+      "default": "Makeshift Software Inc.",
+      "template": "%s | Makeshift Software Inc."
     },
-    "description": "Hexborn is an upcoming 3D Action RPG about a mage with the rare ability to fly! Inspired by Hogwarts Legacy and",
+    "description": "Makeshift Software Inc. is a software development company that specializes in creating custom software solutions for businesses.",
     "robots": {
       "index": true,
       "follow": true
     },
     "openGraph": {
-      "siteName": "Hexborn | Action RPG",
+      "siteName": "Makeshift Software Inc.",
       "images": {
         "url": "~/assets/images/default.png",
         "width": 1200,
