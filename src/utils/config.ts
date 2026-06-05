@@ -20,7 +20,7 @@ export interface MetaDataConfig extends Omit<MetaData, 'title'> {
 
 const config = siteConfig as any;
 
-const DEFAULT_SITE_NAME = 'Hexborn | Indie Action RPG';
+const DEFAULT_SITE_NAME = 'Makeshift Software Inc.';
 
 const getSite = () => {
   const _default = {
