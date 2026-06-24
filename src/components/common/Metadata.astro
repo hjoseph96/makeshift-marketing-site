@@ -35,11 +35,7 @@ const seoProps: AstroSeoProps = merge(
     openGraph: {
       url: canonical,
       site_name: SITE?.name,
-      images: [
-        { url: '/android-chrome-192x192.png', width: 192, height: 192, alt: SITE?.name },
-        { url: '/android-chrome-512x512.png', width: 512, height: 512, alt: SITE?.name },
-        { url: '/apple-touch-icon.png', width: 180, height: 180, alt: SITE?.name },
-      ],
+      images: [{ url: '/makeshift-og-cover.png', width: 1735, height: 906, alt: SITE?.name }],
       locale: 'en',
       type: 'website',
     },

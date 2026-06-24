@@ -19,11 +19,13 @@
     },
     "openGraph": {
       "siteName": "Makeshift Software Inc.",
-      "images": {
-        "url": "~/assets/images/default.png",
-        "width": 1200,
-        "height": 628
-      },
+      "images": [
+        {
+          "url": "/makeshift-og-cover.png",
+          "width": 1735,
+          "height": 906
+        }
+      ],
       "type": "website"
     }
   }
