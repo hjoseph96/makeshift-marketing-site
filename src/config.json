@@ -12,7 +12,7 @@
       "default": "Makeshift Software Inc.",
       "template": "%s | Makeshift Software Inc."
     },
-    "description": "Makeshift Software Inc. is a software development company that specializes in creating custom software solutions for businesses.",
+    "description": "We make what you didn't know you needed.",
     "robots": {
       "index": true,
       "follow": true
