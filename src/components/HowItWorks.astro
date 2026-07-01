@@ -1,6 +1,5 @@
 ---
 import { Splide, SplideSlide } from 'astro-splide';
-import { Tweet, Vimeo, YouTube } from 'astro-embed';
 
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 import '@splidejs/react-splide/css';
@@ -328,7 +327,7 @@ import '@splidejs/react-splide/css';
     const w = window.innerWidth;
     const perPage = w <= 640 ? 1 : w <= 1024 ? 2 : 3;
 
-    const arrows = splideEl.querySelector('.splide__arrows');
+    const arrows = splideEl.querySelector<HTMLElement>('.splide__arrows');
     if (arrows) arrows.style.display = count <= perPage ? 'none' : '';
   }
 

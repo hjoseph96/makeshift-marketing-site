@@ -18,7 +18,7 @@ export interface MetaDataConfig extends Omit<MetaData, 'title'> {
   };
 }
 
-const config = siteConfig as any;
+const config = siteConfig as { site?: Partial<SiteConfig>; metadata?: Partial<MetaDataConfig> };
 
 const DEFAULT_SITE_NAME = 'Makeshift Software Inc.';
 
