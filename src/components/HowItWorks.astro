@@ -15,28 +15,24 @@ import '@splidejs/react-splide/css';
     </p>
   </div>
 
-  <div class="container px-4 pb-20 pl-20 pr-20 relative">
+  <div class="container px-10 sm:px-14 md:px-16 lg:px-20 pb-20 relative">
     <Splide
       options={{
         type: 'loop',
-        perPage: 1,
+        perPage: 3,
         perMove: 1,
-        gap: '1rem',
+        gap: '2rem',
         pagination: true,
         arrows: true,
         autoplay: false,
         breakpoints: {
-          640: {
-            perPage: 1,
-            gap: '1rem',
-          },
-          768: {
+          1024: {
             perPage: 2,
             gap: '1.5rem',
           },
-          1024: {
-            perPage: 3,
-            gap: '2rem',
+          640: {
+            perPage: 1,
+            gap: '1rem',
           },
         },
       }}
@@ -58,10 +54,10 @@ import '@splidejs/react-splide/css';
           </div>
 
           <div class="flex-1 space-y-3 sm:space-y-4">
-            <p class="text-xs text-[0.9rem] sm:text-sm md:text-base text-white tracking-[0.3px] leading-[1.4]">
+            <p class="text-sm md:text-base text-white tracking-[0.3px] leading-[1.4]">
               Senpai is an anime-focused social networking and dating app built for fans who want to connect through shared fandom, personality, and avatar-based interaction.
             </p>
-            <p class="text-xs text-[0.9rem] sm:text-sm md:text-base text-white tracking-[0.3px] leading-[1.4]">
+            <p class="text-sm md:text-base text-white tracking-[0.3px] leading-[1.4]">
               The platform combines anime dating, social discovery, and creator-driven content, giving users a dedicated space to meet other fans, chat, match, and express themselves through anime-inspired profiles and digital identity.
             </p>
           </div>
@@ -94,10 +90,10 @@ import '@splidejs/react-splide/css';
           </div>          
 
           <div class="flex-1 space-y-3 sm:space-y-4">
-            <p class="text-xs text-[antiquewhite] text-[0.9rem] font-semibold sm:text-sm md:text-base text-white tracking-[0.3px] leading-[1.4]">
+            <p class="text-sm md:text-base text-[antiquewhite] font-semibold tracking-[0.3px] leading-[1.4]">
               Experience the best authentic cuisines from local restaurants, delivered straight to your doorstep. Fresh, fast, and full of flavor.
             </p>
-            <p class="text-xs text-[antiquewhite] text-[0.9rem] font-semibold sm:text-sm md:text-base text-white tracking-[0.3px] leading-[1.4]">
+            <p class="text-sm md:text-base text-[antiquewhite] font-semibold tracking-[0.3px] leading-[1.4]">
               The platform combines anime dating, social discovery, and creator-driven content, giving users a dedicated space to meet other fans, chat, match, and express themselves through anime-inspired profiles and digital identity.
             </p>
           </div>
@@ -131,10 +127,10 @@ import '@splidejs/react-splide/css';
           </div>          
 
           <div class="flex-1 space-y-3 sm:space-y-4">
-            <p class="text-xs text-[lightcoral] text-[0.9rem] font-semibold sm:text-sm md:text-base text-white tracking-[0.2px] leading-[1.4]">
+            <p class="text-sm md:text-base text-[lightcoral] font-semibold tracking-[0.2px] leading-[1.4]">
               Makeshift Games develops original titles for PC, console, and mobile, bringing immersive worlds and bold gameplay to players on every major platform.
             </p>
-            <p class="text-xs text-[lightcoral] text-[0.9rem] font-semibold sm:text-sm md:text-base text-white tracking-[0.2px] leading-[1.4]">
+            <p class="text-sm md:text-base text-[lightcoral] font-semibold tracking-[0.2px] leading-[1.4]">
               From early prototypes to polished releases, our studio builds games designed to be played anywhere — at your desk, on the couch, or on the go.
             </p>
           </div>
@@ -308,57 +304,36 @@ import '@splidejs/react-splide/css';
   
   /* Responsive Splide arrows */
   @media (max-width: 1024px) {
-    :global(.splide__arrow--prev) {
-      left: -50px;
-    }
-    
-    :global(.splide__arrow--next) {
-      right: -50px;
-    }
+    :global(.splide__arrow--prev) { left: -50px; }
+    :global(.splide__arrow--next) { right: -50px; }
+    :global(.splide__arrow) { width: 35px; height: 35px; }
   }
-  
-  @media (max-width: 768px) {
-    :global(.splide__arrow--prev) {
-      left: -40px;
-    }
-    
-    :global(.splide__arrow--next) {
-      right: -40px;
-    }
-    
-    :global(.splide__arrow) {
-      width: 35px;
-      height: 35px;
-    }
-  }
-  
+
   @media (max-width: 640px) {
-    :global(.splide__arrow--prev) {
-      left: -30px;
-    }
-    
-    :global(.splide__arrow--next) {
-      right: -30px;
-    }
-    
-    :global(.splide__arrow) {
-      width: 30px;
-      height: 30px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    :global(.splide__arrow--prev) {
-      left: -25px;
-    }
-    
-    :global(.splide__arrow--next) {
-      right: -25px;
-    }
-    
-    :global(.splide__arrow) {
-      width: 28px;
-      height: 28px;
-    }
+    :global(.splide__arrow--prev) { left: 4px; }
+    :global(.splide__arrow--next) { right: 4px; }
+    :global(.splide__arrow) { width: 28px; height: 28px; opacity: 0.75; }
   }
 </style>
+
+<script>
+  function syncArrows() {
+    const splideEl = document.querySelector('.splide');
+    if (!splideEl) return;
+
+    const count = splideEl.querySelectorAll(
+      '.splide__list > .splide__slide:not(.splide__slide--clone)'
+    ).length;
+
+    const w = window.innerWidth;
+    const perPage = w <= 640 ? 1 : w <= 1024 ? 2 : 3;
+
+    const arrows = splideEl.querySelector('.splide__arrows');
+    if (arrows) arrows.style.display = count <= perPage ? 'none' : '';
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(syncArrows, 50); // allow Splide to render clones first
+    window.addEventListener('resize', syncArrows);
+  });
+</script>
